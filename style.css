@@ -45,6 +45,7 @@
 label{
     display: none;
   }
+  
 
 .nav-links li a:hover{
     color: #4CAF4F;
@@ -283,6 +284,7 @@ font-size: 16px;
     justify-content: space-evenly;
     gap: 40px;
     margin-top: 100px;
+    background-color: #F5F7FA;
 }
 
 .smith-containt{
@@ -299,6 +301,166 @@ font-size: 16px;
 }
 .smith-containt h3{
     color: #4CAF4F;
+}
+
+
+
+
+.caring-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 0 500px;
+    margin-top: 20px;
+}
+.caring-imgs{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer-heading{
+    text-align: center;
+    padding: 30px;
+}
+.footer-heading h1{
+ font-size: 36px;
+ padding: 20px;
+}
+
+.footer-heading button{
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #4CAF4F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px
+}
+.demo-btn img{
+    width: 15px;
+    height: 15px;
+    padding: 1px;
+    margin-top: 2px;
+}
+/* footer */
+.footer {
+    background-color: #263238;
+    color: #ffffff;
+    padding: 50px 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-logo-section {
+    flex: 1 1 250px;
+    margin-bottom: 30px;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-logo-section p {
+    font-size: 14px;
+    color: #a7a7a7;
+    margin-bottom: 20px;
+  }
+  
+  .footer-social-icons a {
+    margin-right: 10px;
+  }
+  
+  .footer-social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footer-links-section {
+    flex: 2 1 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-column {
+    flex: 1 1 200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    color: #a7a7a7;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #ffffff;
+  }
+  
+  .footer-newsletter {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .footer-newsletter input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+  }
+  
+  .footer-newsletter button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-links-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-column {
+      width: 100%;
+      text-align: center;
+    }
 }
 
 /* ===== Responsive for Tablet Devices ===== */
@@ -350,5 +512,197 @@ font-size: 16px;
     }
     .nav-links.show {
         display: flex;
+    }
+}
+/* ================== Tablet Responsive (768px - 1024px) ================== */
+@media (max-width: 1024px) {
+    .container nav {
+        padding: 10px 40px;
+    }
+    .hero-section {
+        flex-direction: column;
+        padding: 50px 20px;
+        gap: 40px;
+    }
+    .hero-section img {
+        width: 300px;
+        height: auto;
+    }
+    .main-containt {
+        align-items: center;
+        text-align: center;
+    }
+    .main-containt h1, .main-containt span {
+        font-size: 36px;
+    }
+    .main-containt p {
+        font-size: 16px;
+        max-width: 600px;
+    }
+    .client-logos {
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+    .pixelgrade-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    .pixelgrade-img img {
+        width: 90%;
+        max-width: 400px;
+    }
+    .pixelgrade-containt {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    .helping {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .helping-containt, .helping-members {
+        width: 100%;
+        justify-content: center;
+    }
+    .smith-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    .smith-containt {
+        width: 100%;
+        padding: 0;
+    }
+    .tim-smith-img img {
+        width: 250px;
+    }
+    .caring-section {
+        padding: 0 30px;
+    }
+    .caring-imgs {
+        flex-wrap: wrap;
+    }
+}
+
+/* ================== Mobile Responsive (below 768px) ================== */
+@media (max-width: 768px) {
+    .container nav {
+        padding: 10px 20px;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 300px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    .hero-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+    .hero-section img {
+        width: 250px;
+        height: auto;
+    }
+    .main-containt {
+        align-items: center;
+        text-align: center;
+    }
+    .main-containt h1, .main-containt span {
+        font-size: 28px;
+    }
+    .main-containt p {
+        font-size: 14px;
+        max-width: 90%;
+    }
+    .client-logos {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+    .entire-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .icon {
+        width: 80%;
+    }
+    .pixelgrade-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    .pixelgrade-img img {
+        width: 100%;
+    }
+    .pixelgrade-containt {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .helping {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    .helping-containt, .helping-members {
+        width: 100%;
+    }
+    .helping-members {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .smith-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    .smith-containt {
+        width: 100%;
+        padding: 0;
+    }
+    .tim-smith-img img {
+        width: 200px;
+    }
+    .caring-section {
+        padding: 0 20px;
+    }
+    .caring-imgs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-heading h1 {
+        font-size: 28px;
+    }
+    .footer-heading button {
+        width: 200px;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
