@@ -81,6 +81,7 @@ label{
     border-radius: 5px;
     color: white;
     transition: color 0.3s ease, transform 0.3s ease-in;
+    width: 150px;
 }
 .register-btn:hover{
     background-color: transparent;
@@ -117,9 +118,7 @@ label{
     flex-direction: column;
     background-color: transparent;
 }
-.register-btn{
-    width: 150px;
-}
+
 .main-containt h1, span{
     font-size: 64px;
     background-color: transparent;
@@ -187,11 +186,9 @@ label{
     gap: 20px;
     padding: 20px;
     width: 300px;
-    /* background-color: red; */
 }
 .icon img{
     width: 60px;
-
 }
 
 .icon h2{
@@ -303,9 +300,6 @@ font-size: 16px;
     color: #4CAF4F;
 }
 
-
-
-
 .caring-section{
     display: flex;
     flex-direction: column;
@@ -398,6 +392,7 @@ font-size: 16px;
   }
   
   .footer-column h4 {
+    color: white;
     font-size: 18px;
     margin-bottom: 15px;
   }
@@ -445,23 +440,6 @@ font-size: 16px;
     cursor: pointer;
   }
   
-  /* Responsive */
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-links-section {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-column {
-      width: 100%;
-      text-align: center;
-    }
-}
 
 /* ===== Responsive for Tablet Devices ===== */
 @media (max-width: 1024px) {
@@ -485,37 +463,7 @@ font-size: 16px;
     .img-section img {
         width: 400px;
     }
-}
 
-
-/* Mobile Responsive Changes */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* mobile pe hide */
-        flex-direction: column;
-        background-color: white;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        width: 400px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        padding: 20px;
-        border-radius: 8px;
-    }
-    .nav-links ul {
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
-    }
-    .menu-icon {
-        display: block; /* mobile pe show hoga */
-    }
-    .nav-links.show {
-        display: flex;
-    }
-}
-/* ================== Tablet Responsive (768px - 1024px) ================== */
-@media (max-width: 1024px) {
     .container nav {
         padding: 10px 40px;
     }
@@ -589,8 +537,33 @@ font-size: 16px;
     }
 }
 
-/* ================== Mobile Responsive (below 768px) ================== */
+
+/* Mobile Responsive Changes */
 @media (max-width: 768px) {
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 400px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .nav-links ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    .menu-icon {
+        display: block; 
+    }
+    .nav-links.show {
+        display: flex;
+    }
+
     .container nav {
         padding: 10px 20px;
     }
@@ -665,15 +638,24 @@ font-size: 16px;
     }
     .helping {
         flex-direction: column;
-        gap: 20px;
+        gap: 50px;
         padding: 20px;
     }
     .helping-containt, .helping-members {
         width: 100%;
+
     }
     .helping-members {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 30px;
+    }
+    .helping-containt h1{
+        font-size: 36px;
+        text-align: center;
+    }
+    .helping-containt p{
+        text-align: center;
     }
     .smith-section {
         flex-direction: column;
@@ -695,6 +677,9 @@ font-size: 16px;
         flex-wrap: wrap;
         justify-content: center;
     }
+    .login , .register-btn{
+        display: none;
+    }
     .footer-heading h1 {
         font-size: 28px;
     }
@@ -705,4 +690,20 @@ font-size: 16px;
         flex-direction: column;
         align-items: center;
     }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .footer-links-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .footer-column {
+        width: 100%;
+        text-align: center;
+      }
 }
+
