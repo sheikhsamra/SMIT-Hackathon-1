@@ -9,7 +9,8 @@
     width: 100%;
     height: auto;
     max-width: auto;
-    margin: 0 auto
+    max-width: 1540px; /* or any max width you prefer */
+    margin: 0 auto;
  }
  .container{
     width: 100%;
@@ -66,13 +67,23 @@ label{
     transform: scaleX(1.1);
     color: #4CAF4F;
 }
+.btn{
+    display: flex;
+    gap: 10px;
+}
 .login{
     padding: 10px 20px;
     border: none;
     background-color: white;
     color: #4CAF4F;
     font-size: 14px;
-    font-weight: 500
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease-in;
+}
+.login:hover{
+    border: #4CAF4F solid 1px;
+    border-radius: 5px;
+    transform: scaleX(1.1);
 }
 .register-btn{
     background-color: #4CAF4F;
@@ -102,7 +113,7 @@ label{
     height: 30px;
 }
 
-.hero-section{
+#hero-section{
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -131,11 +142,11 @@ label{
     font-size: 14px;
     background-color: transparent;
 }
-.hero-section img{
+#hero-section img{
     width: 400px;
     height: 400px;
 }
-.client-section{
+#client-section{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,7 +175,7 @@ label{
     width: 50px;
     height: 50px;
 }
-.entire-section{
+#entire-section{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -201,10 +212,11 @@ label{
     color: #717171;
 }
 
-.pixelgrade-section{
+#pixelgrade-section{
     display: flex;
     justify-content: center;
     gap: 100px;
+    margin-top: 60px;
 }
 .pixelgrade-img img{
     width: 500px;
@@ -228,9 +240,9 @@ label{
     color: #717171;
 }
 
-.helping{
+#helping{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 20px;
 }
 .helping-containt{
@@ -276,12 +288,13 @@ font-size: 16px;
 .tim-smith-img img{
     width: 300px;
 }
-.smith-section{
+#smith-section{
     display: flex;
     justify-content: space-evenly;
-    gap: 40px;
+    gap: 100px;
     margin-top: 100px;
     background-color: #F5F7FA;
+    padding: 40px;
 }
 
 .smith-containt{
@@ -300,7 +313,7 @@ font-size: 16px;
     color: #4CAF4F;
 }
 
-.caring-section{
+#caring-section{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -340,7 +353,7 @@ font-size: 16px;
     margin-top: 2px;
 }
 /* footer */
-.footer {
+#footer {
     background-color: #263238;
     color: #ffffff;
     padding: 50px 20px;
@@ -362,6 +375,7 @@ font-size: 16px;
   .footer-logo {
     width: 150px;
     margin-bottom: 15px;
+    filter: invert(1);
   }
   
   .footer-logo-section p {
@@ -439,16 +453,16 @@ font-size: 16px;
     font-size: 20px;
     cursor: pointer;
   }
-  
 
 /* ===== Responsive for Tablet Devices ===== */
 @media (max-width: 1024px) {
     .container nav {
         padding: 10px 50px;
     }
-    .hero-section {
+    #hero-section {
         flex-direction: column;
         padding: 60px 20px;
+        gap: 40px;
     }
     .main-containt h1, .main-containt span {
         font-size: 40px;
@@ -467,12 +481,8 @@ font-size: 16px;
     .container nav {
         padding: 10px 40px;
     }
-    .hero-section {
-        flex-direction: column;
-        padding: 50px 20px;
-        gap: 40px;
-    }
-    .hero-section img {
+
+    #hero-section img {
         width: 300px;
         height: auto;
     }
@@ -492,7 +502,7 @@ font-size: 16px;
         gap: 40px;
         justify-content: center;
     }
-    .pixelgrade-section {
+    #pixelgrade-section{
         flex-direction: column;
         align-items: center;
         gap: 40px;
@@ -507,7 +517,7 @@ font-size: 16px;
         text-align: center;
         padding: 0;
     }
-    .helping {
+    #helping {
         flex-direction: column;
         align-items: center;
         gap: 30px;
@@ -516,7 +526,7 @@ font-size: 16px;
         width: 100%;
         justify-content: center;
     }
-    .smith-section {
+    #smith-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -529,7 +539,7 @@ font-size: 16px;
     .tim-smith-img img {
         width: 250px;
     }
-    .caring-section {
+    #caring-section {
         padding: 0 30px;
     }
     .caring-imgs {
@@ -540,13 +550,16 @@ font-size: 16px;
 
 /* Mobile Responsive Changes */
 @media (max-width: 768px) {
+    .main-container{
+        overflow: hidden;
+    }
     .nav-links {
         display: none; 
         flex-direction: column;
         background-color: white;
         position: absolute;
         top: 70px;
-        right: 20px;
+        /* right: 20px; */
         width: 400px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         padding: 20px;
@@ -560,8 +573,10 @@ font-size: 16px;
     .menu-icon {
         display: block; 
     }
-    .nav-links.show {
+    .nav-links.active {
         display: flex;
+        z-index: 10;
+        width: 80%;
     }
 
     .container nav {
@@ -575,27 +590,24 @@ font-size: 16px;
         flex-direction: column;
         position: absolute;
         top: 70px;
-        right: 20px;
+        /* right: 20px; */
         width: 300px;
         background-color: white;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    .nav-links.show {
-        display: flex;
-    }
     .nav-links ul {
         flex-direction: column;
         gap: 15px;
         align-items: flex-start;
     }
-    .hero-section {
+    #hero-section {
         flex-direction: column;
         padding: 40px 20px;
         gap: 30px;
     }
-    .hero-section img {
+    #hero-section img {
         width: 250px;
         height: auto;
     }
@@ -619,14 +631,19 @@ font-size: 16px;
         flex-wrap: wrap;
         justify-content: center;
     }
+    .entire-heading{
+        padding: 0px 50px;
+    }
+   
     .icon {
         width: 80%;
     }
-    .pixelgrade-section {
+    #pixelgrade-section {
         flex-direction: column;
         align-items: center;
         gap: 20px;
         padding: 0 10px;
+        margin-top: 100px;
     }
     .pixelgrade-img img {
         width: 100%;
@@ -636,14 +653,16 @@ font-size: 16px;
         padding: 0;
         text-align: center;
     }
-    .helping {
+    #helping {
         flex-direction: column;
         gap: 50px;
         padding: 20px;
     }
     .helping-containt, .helping-members {
         width: 100%;
-
+    }
+    .design-img img{
+        width: 300px;
     }
     .helping-members {
         flex-wrap: wrap;
@@ -653,11 +672,12 @@ font-size: 16px;
     .helping-containt h1{
         font-size: 36px;
         text-align: center;
+        
     }
     .helping-containt p{
         text-align: center;
     }
-    .smith-section {
+    #smith-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -670,12 +690,17 @@ font-size: 16px;
     .tim-smith-img img {
         width: 200px;
     }
-    .caring-section {
+    #caring-section {
         padding: 0 20px;
+        margin-top: 100px;
     }
     .caring-imgs {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .caring-imgs img{
+        width: 300px;
     }
     .login , .register-btn{
         display: none;
